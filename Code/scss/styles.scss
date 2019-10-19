@@ -1,0 +1,319 @@
+// Resets
+@import "../bower_components/normalize-scss/normalize";
+@import "susy"; //susy
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
+@import url(https://fonts.googleapis.com/css?family=Oswald:700,400|Merriweather+Sans|Quicksand:700|Gloria+Hallelujah);
+@import "custom-bootstrap"; //bootstrap
+
+$susy: (
+ columns: 12,
+ container: 1200px,
+ global-box-sizing: border-box,
+ debug: (image: hide)
+ );
+
+ @include border-box-sizing;
+
+.wrap {
+ @include container();
+ font-family: $font-family-merriweather;
+}
+
+.centred-content {
+ text-align: center;
+ @include breakpoint (760px) {
+   @include span(10);
+   margin-left: span(1 wide);
+ }
+}
+
+.four-columns {
+ @include clearfix;
+ .grid-item {
+   @include gallery(6);
+   margin-bottom: gutter();
+   @include breakpoint(760px) {
+     @include gallery(3);
+     margin-bottom: 0;
+   }
+ }
+}
+
+.three-columns {
+ @include clearfix;
+ .grid-item {
+ 	@include breakpoint(760px) {
+ 	 @include gallery(4);
+ 	}
+ }
+}
+
+.two-columns {
+ @include clearfix;
+ .grid-item {
+   margin-bottom: gutter();
+   @include breakpoint(760px) {
+     @include gallery(6);
+   }
+ }
+}
+
+//
+//
+h1 {
+ margin-bottom: 30px;
+}
+
+.btn-default:hover {
+ background: $brand-primary;
+ color: white;
+ border-color: $brand-primary;
+}
+
+.btn-primary:hover {
+ background: white;
+ color: $brand-primary;
+}
+
+.navbar {
+ margin-bottom: 0;
+ border-bottom: 0;
+}
+
+.navbar-collapse {
+ border-top: 0;
+}
+
+.cust-jumbotron {
+	// background: $brand-primary;
+	font-family: $font-family-oswald;
+	color: brand-primary;
+	text-align: center;
+	padding: 80px 0;
+
+	 	.lead {
+		   	font-size: 150%;
+		    line-height: 1.5 !important;
+	 }
+	 h3 {
+	 	font-size: 135%;
+	 	line-height: 1.5;
+	 	 color: #050002 !important;
+	 	 text-align: left !important;
+		 
+	 }
+
+	 h4 {
+	 	font-size: 135%;
+	 	line-height: 1.5;
+	 	 color: #050002 !important;
+
+	 }
+}
+
+.bootstrap-icon {
+	background-image: url('../img/ramki.jpg');
+	background-size: cover;
+	 display: inline-block;
+	 width: 200px;
+	 height: 200px;
+	 margin-bottom: 30px;
+	 /* font-size: 108px;
+	 line-height: 140px;
+	 font-weight: 500; 
+	 border: 1px solid #cdbfe3; */
+	 border-radius: 50%;
+}
+
+.lead {
+ font-size: 130%;
+ line-height: 1.5;
+}
+
+.half-rule {
+ width: 100px;
+ margin: 40px auto;
+}
+
+.featured-item {
+ text-align: center;
+ padding: 80px 0;
+ border-bottom: 1px solid #ccc;
+}
+
+
+/* background images for div */
+#about {
+	background-image: url("../img/background/bg-about.jpg");
+	background-size: cover;
+	height: 100%;
+
+}
+
+
+#research {
+	background-image: url("../img/background/research.jpg");
+	background-size: cover;
+	height: 100%;
+	
+
+}
+
+#teaching {
+	background-image: url("../img/background/teaching.jpg");
+	background-size: cover;
+	height: 100%;
+	
+
+}
+
+#publications {
+	background-image: url("../img/background/publications.jpg");
+	background-size: cover;
+	height: 100%;
+
+	ol{
+
+	font-size: 135%;
+	line-height: 1.5;
+	text-align: left !important;
+	}
+	li{
+	margin: 10px 0;
+	}
+}
+
+#all {
+	background-image: url("../img/background/publications.jpg");
+	background-size: cover;
+	height: 100%;
+
+	ol{
+
+	font-size: 135%;
+	line-height: 1.5;
+	text-align: left !important;
+	color: black;
+	}
+	li{
+	margin: 10px 0;
+
+	}
+}
+
+#gallery {
+	background-image: url("../img/background/gallery.jpg");
+	background-size: cover;
+	height: 100%;
+}
+
+#contact {
+	background-image: url("../img/background/contact.jpg");
+	background-size: cover;
+	height: 100%;
+}
+
+#all{
+	background-image: url("../img/background/all.jpg");
+	background-size: cover;
+	height: 100%;
+
+}
+
+#privacy{
+	background-image: url("../img/background/privacy.jpg");
+	background-size: cover;
+	height: 100%;
+	h3{
+	margin-bottom: 330px;
+
+	}
+}
+
+#terms{
+	background-image: url("../img/background/terms1.jpg");
+	background-size: cover;
+	height: 100%;
+	h3{
+	margin-bottom: 200px;
+	color: red !important;
+
+	}
+}
+
+body{
+	background-color: #3090C7;
+
+}
+
+
+
+
+
+
+
+/* Courosal text color*/
+
+.ol{
+	color: #050002;
+	font-size: 4em;
+	
+}
+
+
+
+
+.carousel-caption{
+	color: black;
+}
+
+
+
+
+/* Reduce Carousal Size*/
+
+.carousel .item {
+  height: 700px;
+  min-height: 700px;
+  
+
+   	
+   	
+  
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 700px;
+   	
+   	
+}
+
+/* helper classes */
+
+/* rosegold */
+.text-rosegold { color: $state-danger-bg !important; }
+
+/* purple */
+.text-purple { color: #8e44ad; }
+
+.text-jetblack{ color: #050002; }
+
+.text-red{ color: #FF0000;}
+
+.text-orange{ color: #800000}
+
+.large-para {
+	font-size: 135%;
+	line-height: 1.5;
+	text-align: center !important;
+}
+
+
+
+
+
+
+
